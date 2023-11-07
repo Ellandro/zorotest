@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="static/Style.css">
+</head>
+<body>
+    <section class="header">
+       <header class="main-header1"><h2>Zoro</h2></header>
+        <div class="main-header2C">
+            <div class="interieur">
+                <p><strong>Connectez-vous</strong></p>
+                <form action="{{ url_for('Connexion')}}" method="POST">
+                    {% if message is defined and message %}
+                    <div>{{message}}</div>
+                    {% endif %}
+                    <div class="input">
+                        <input type="email" placeholder="Identifiant" name="email">
+                    </div>
+                    <div class="input">
+                        <input type="password" placeholder="Mot de passe" name="password">
+                    </div>
+
+                     <button class="button1" type="submit">Connexion</button> <br>
+                     <a href="">Si pas de compte inscrivez-vous</a>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
